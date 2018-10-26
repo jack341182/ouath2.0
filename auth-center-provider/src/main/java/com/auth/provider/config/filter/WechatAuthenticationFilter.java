@@ -1,5 +1,8 @@
 package com.auth.provider.config.filter;
 
+import com.alibaba.fastjson.JSONObject;
+import com.auth.common.HttpUtil;
+import com.auth.common.WechatAuthenticationToken;
 import com.auth.provider.config.properties.WechatProperties;
 import com.auth.provider.constants.AuthorizationServerConstants;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -10,6 +13,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.springframework.util.StringUtils;
 import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletRequest;
